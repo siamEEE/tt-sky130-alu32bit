@@ -35,7 +35,14 @@ Control is supplied on `uio_in`. Bits `uio_in[2:0]` form the wrapper command, wh
 The wrapper is sequential because it must retain the four input bytes that make up each operand and remember the selected output byte. The ALU itself remains combinational and has no internal execution state. No separate execute command is required: loading a new opcode or operand changes the combinational result automatically.
  
 The 32-bit result is presented through a 4-to-1 byte multiplexer. The selected byte appears on `uo_out[7:0]`. Arithmetic is performed modulo `2^32`; carry, borrow, signed overflow, and condition flags are not exposed by this version of the design. The active-low reset clears both operands, selects ADD as the default opcode, and selects result byte 0.
- 
+
+
+ ### Physical implementation
+
+The design was implemented in a single 1x1 SKY130 Tiny Tapeout tile. The final physical design uses 69 flip-flops for the two 32-bit operand registers, 3-bit opcode register, and 2-bit output selector. The SKY26d implementation passed the Tiny Tapeout physical precheck and gate-level functional verification.
+
+![Final SKY130 GDS render](gds_render.png)
+
 ## How to test
  
 A complete transaction consists of loading operand A, loading operand B, loading the operation code, and reading the four result bytes.

@@ -79,6 +79,12 @@ The result is read from `uo_out[7:0]` one byte at a time: `0x7C`, `0x59`, `0x36`
 The repository includes a Cocotb testbench driven by Icarus Verilog. Directed tests cover zero, all-ones values, arithmetic wraparound, alternating bit patterns, and representative 32-bit operands. Deterministic randomized tests exercise all eight opcodes.
  
 The Tiny Tapeout SKY26d workflow subsequently performs physical implementation, the official precheck, and gate-level simulation using the generated netlist. The workflow badges at the top of this page show the current repository status.
+
+## Physical implementation
+
+The design was hardened for the SkyWater SKY130 process using the Tiny Tapeout SKY26d LibreLane/OpenROAD flow. The final 1x1 implementation passed the Tiny Tapeout precheck and gate-level verification.
+
+![Final SKY130 GDS render](docs/gds_render.png)
  
 ## Project structure
  
