@@ -106,6 +106,11 @@ This tapeout version is intentionally small and auditable. It does not include U
 ## Tiny Tapeout documentation
  
 The shuttle datasheet text is maintained in [`docs/info.md`](docs/info.md).
+
+## Authors
+
+- Juhaer Mahtab Siam — Discord: `jm_siam_60612`
+- Fahim Islam — Discord: `makarov_141`
  
 ## License
  

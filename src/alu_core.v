@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2026 Juhaer Mahtab Siam, Fahim Islam
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * 32-bit combinational ALU core
+ */
+
+
 `default_nettype none
 
 module alu_core (

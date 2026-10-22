@@ -1,6 +1,8 @@
 /*
- * 32-bit 8-operation ALU for Tiny Tapeout SKY26d
+ * Copyright (c) 2026 Juhaer Mahtab Siam, Fahim Islam
  * SPDX-License-Identifier: Apache-2.0
+ *
+ * 32-bit 8-operation ALU for Tiny Tapeout SKY26d
  */
 
 `default_nettype none
